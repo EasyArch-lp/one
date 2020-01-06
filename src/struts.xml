@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true" />
+
+    <constant name="struts.custom.i18n.resources" value="properties/messageResource"/>
+    <constant name="struts.i18n.encoding" value="UTF-8" />
+    <package name="struts2" extends="struts-default">
+<!--        <action name="login" class="com.ascent.struts2.action.LoginAction">-->
+<!--            <result name="error">/error.jsp</result>-->
+<!--            <result name="success">/welcome.jsp</result>-->
+<!--        </action>-->
+        <action name="userLoginAction" class="com.ascent.struts2.action.UsrLoginAction">
+            <result name="anli1_success_1">/anli1/regisUserWelcome.jsp</result>
+            <result name="anli1_success_2">/anli1/regisUserWelcome.jsp</result>
+            <result name="anli1_success_3">/anli1/adminWelcome.jsp</result>
+            <result name="error">/anli1/login.jsp</result>
+        </action>
+        <action name="login" class="com.ascent.struts2.action.Loginaction">
+            <result name="success">/Say/ok.jsp</result>
+            <result name="input">/Say/index.jsp</result>
+        </action>
+        <action name="validationAction" class="com.ascent.struts2.action.ValidationAction">
+            <result>/Say1/Output.jsp</result>
+            <result name="input">/Say1/Input.jsp</result>
+        </action>
+        <action name="Login" class="com.ascent.struts2.action.loginAction">
+            <result name="success">/Best/ok.jsp</result>
+            <result name="input">/Best/login.jsp</result>
+        </action>
+    </package>
+
+
+</struts>
